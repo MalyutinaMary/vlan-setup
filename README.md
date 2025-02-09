@@ -1,4 +1,86 @@
-# Конфигурация сетей
+# Компьютерные сети
+
+## Настройка NTP
+
+>`sh clock`
+>
+>`clock set HH:MM:SS MONTH DAY YEAR`
+>
+>`sh ntp status`
+>
+>`sh ntp associations`
+>
+>(config) `ntp server <ip-address>`
+>
+>(config) `ntp master`
+>
+>(config) `ntp source <ip-address>`
+
+## Настройка DNS
+
+>Необходимо добавить loopback-интерфейс для корректного разрешения добавленного DNS-имени в IP. Не использовать диапазон адресов 127.0.0.0/8, чтобы loopback-интерфейс был доступен внешним устройствам.
+>
+>(config) `int Loopback0`
+>
+>(config-if) `ip add <ip-address>`
+>  
+>Настройка DNS-сервера:
+>
+>(config) `ip dns server`
+>
+>(config) `ip host <host-name> <ip-address>`
+>  
+>Настройка DNS-клиента:
+>
+>(config) `ip name-server <ip-address>`
+>
+>(config) `ip domain lookup`
+
+## Настройка DNS
+>(config) `ip dhcp excluded-address <low-address> <high-address>`
+>
+>(config) `ip dhcp pool <POOL_NAME>`
+>
+>(dhcp-config) `network <subnet> <subnet-mask>`
+>
+>(dhcp-config) `dns-server <ip-address>`
+>
+>(dhcp-config) `default-router <ip-address>`
+>
+>(dhcp-config) `lease 0 5 30`
+
+## Настройка SSH
+
+Установка пароля:
+>(config) `aaa new-model`
+>
+>(config) `username admin`
+>
+>(config) `username admin secret <admin-password>`
+>
+>(config) `enable secret <privileged-password>`
+>
+>Настройка соединения по SHH:
+>
+>(config) `hostname <new-hostname>`
+>
+>(config) `ip domain-name <new-domain-name>`
+>
+>(config) `crypto key generate rsa`
+>
+>(config) `line vty 0 4`
+>
+>(config-line) `transport input ssh`
+>
+>Настройка версии SSH:
+>
+>`sh ip ssh`
+>
+>(config) `ip ssh version 2`
+>
+>Подключение к удаленному устройству по SSH:
+>
+>`ssh -l <username> <ip-address>`
 
 ## Построение VLAN
 
