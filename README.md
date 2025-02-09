@@ -1,6 +1,10 @@
 # Компьютерные сети
 
-## Настройка NTP
+## Взаимодействие "клиент-сервер"
+
+![image](https://github.com/user-attachments/assets/e870bcb7-0fb3-40db-82a1-6fe7347a2a71)
+
+### NTP
 
 >`sh clock`
 >
@@ -22,7 +26,7 @@
 
 >(config) `ntp server <ip-address>`
 
-## Настройка DNS
+### DNS
 
 Настройка DNS-сервера:
 
@@ -40,7 +44,7 @@
 >
 >(config) `ip domain lookup`
 
-## Настройка DHCP
+### DHCP
 
 >(config) `ip dhcp excluded-address <low-address> <high-address>`
 >
@@ -54,7 +58,7 @@
 >
 >(dhcp-config) `lease 0 5 30`
 
-## Настройка SSH
+### SSH
 
 Настройка пользователя и пароля:
 
