@@ -1,6 +1,6 @@
 # Компьютерные сети
 
-## Взаимодействие "клиент-сервер"
+## Настройка серверов
 
 ![image](https://github.com/user-attachments/assets/e870bcb7-0fb3-40db-82a1-6fe7347a2a71)
 
@@ -46,6 +46,8 @@
 
 ### DHCP
 
+Настройка DHCP-сервера:
+
 >(config) `ip dhcp excluded-address <low-address> <high-address>`
 >
 >(config) `ip dhcp pool <POOL_NAME>`
@@ -60,7 +62,7 @@
 
 ### SSH
 
-Настройка пользователя и пароля:
+Создание пользователя и пароля:
 
 >(config) `aaa new-model`
 >
@@ -82,7 +84,7 @@
 >
 >(config-line) `transport input ssh`
 
-Настройка версии:
+Настройка версии SSH:
 
 >`sh ip ssh`
 >
@@ -93,10 +95,7 @@
 >`ssh -l <username> <ip-address>`
 
 ## Построение VLAN
-
 ![image](https://github.com/user-attachments/assets/083723b2-eb71-439b-b836-51c0a073704a)
-
-
 ### Добавление VLAN
 ![image](https://github.com/user-attachments/assets/da147f3c-e58b-45f3-be2e-b444b16f4be3)
 ### Конфигурация портов на коммутаторе
