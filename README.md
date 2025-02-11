@@ -14,10 +14,6 @@
 
 Аналогично для ESW2
 
-## Проверка соединения
-![image](https://github.com/user-attachments/assets/a66e9f3e-0300-4acf-84b2-befba4eb5470)
-![image](https://github.com/user-attachments/assets/c4f5a86e-1574-45bd-99da-c9c0de62db12)
-
 ## Агрегирование каналов
 ![image](https://github.com/user-attachments/assets/81a7da44-1a16-45fc-ba39-1b7e43059ac0)
 ![image](https://github.com/user-attachments/assets/67963f72-03d3-4f55-a2bb-d2909d5aa2f3)
